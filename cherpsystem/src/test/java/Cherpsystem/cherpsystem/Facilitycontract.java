@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class Facilitycontract {
+	
 	WebDriver driver = new ChromeDriver();
 //FirefoxOptions firefoxoptions = new FirefoxOptions();
 //ChromeOptions chromeoptions = new ChromeOptions();
