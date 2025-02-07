@@ -123,19 +123,122 @@ WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By
 	    Thread.sleep(2000);
 	    WebElement clear1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Reset")));
 	    clear1.click();
-	    Thread.sleep(5000);
+	    Thread.sleep(7000);
 	    WebElement selectall = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='expenseTranListTable-select-all']")));
 	    selectall.click();
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("saveExpense")).click();
 	    Thread.sleep(1000);
 	    driver.switchTo().alert().accept();
+	    Thread.sleep(2000);
 	    
 	    
+	    //Edit Transaction
+	    WebElement Edittransaction = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[contains(@class,'edit-control btnCol')])[1]")));
+	    Edittransaction.click();
+	    Thread.sleep(1000);
+	    driver.findElement(By.id("vendor")).sendKeys("Test Vendor");
+	    driver.findElement(By.id("gpAmount")).sendKeys("54.36");
+	    WebElement Receipt1 = driver.findElement(By.name("gpReceipt"));
+	    Select Receiptselect1 = new Select(Receipt1);
+	    Receiptselect1.selectByVisibleText("Yes");
+	    WebElement Account1 = driver.findElement(By.name("accountId"));
+	    Select Accountselect1 = new Select(Account1);
+	    Accountselect1.selectByVisibleText("Accreditation (705)");
+	    WebElement Site1 = driver.findElement(By.name("siteId"));
+	    Select Siteselect1 = new Select(Site1);
+	    Siteselect1.selectByVisibleText("CH Admin (100)");
+	    driver.findElement(By.id("gpComment")).sendKeys("Test Vendor Comments");
+	    Thread.sleep(500);
+	    driver.findElement(By.id("saveExpense")).click();
+	    Thread.sleep(1000);
 	    
+	    //Table Inside Edit Function	
+	    WebElement Receipt2 = driver.findElement(By.name("gpReceipt"));
+	    Select Receiptselect2 = new Select(Receipt2);
+	    Receiptselect2.selectByVisibleText("Yes");
+	    WebElement Account2 = driver.findElement(By.name("accountId"));
+	    Select Accountselect2 = new Select(Account2);
+	    Accountselect2.selectByVisibleText("Accreditation (705)");
+	    WebElement Site2 = driver.findElement(By.name("siteId"));
+	    Select Siteselect2 = new Select(Site2);
+	    Siteselect2.selectByVisibleText("CH Admin (100)");
+	    driver.findElement(By.id("gpComment")).sendKeys("Test Vendor Comments");
+	    Thread.sleep(500);
+	    driver.findElement(By.id("saveExpense")).click();
+	    Thread.sleep(1000);
 	    
-	    
-	    
-	    
-	    
+	    //File Upload in TABLE
+	    WebElement UPLOADSPLITUP = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[contains(@class,'upload-control2 fileUploadBtn')])[1]")));
+	    UPLOADSPLITUP.click();
+	    WebElement splitupfileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("splitUpDocFiles")));
+		File splitupfileToUpload = new File("C:\\Users\\panini019\\Desktop\\UNUM File\\Dec\\CL_UNUM_December_2024.xlsx"); // Update with the path to your PNG file
+		splitupfileInput.sendKeys(splitupfileToUpload.getAbsolutePath());
+		 Thread.sleep(1000);
+		 driver.findElement(By.xpath("//button[@class='savebtn1 uploadSplitupDocFile']")).click();
+		 Thread.sleep(1000);
+		 driver.findElement(By.xpath("(//button[@id='close'])[2]")).click();
+		 Thread.sleep(1000);
+		 
+		 WebElement Uploadreceipt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[@class=' upload-control fileUploadBtn'])[1]")));
+		 Uploadreceipt.click();
+		    WebElement ReceiptfileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("docFiles")));
+			File ReceiptfileToUpload = new File("C:\\Users\\panini019\\Desktop\\UNUM File\\Dec\\CL_UNUM_December_2024.xlsx"); // Update with the path to your PNG file
+			ReceiptfileInput.sendKeys(ReceiptfileToUpload.getAbsolutePath());
+			 Thread.sleep(1000);
+			 driver.findElement(By.xpath("//button[@class='savebtn1 uploadDocFile']")).click();
+			 Thread.sleep(1000);
+			 driver.findElement(By.xpath("(//button[@id='close'])[1]")).click();
+			 Thread.sleep(1000);
+			 WebElement downloadreceipt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[contains(@class,'download-control fileDownloadBtn')])[1]")));
+			 downloadreceipt.click();
+			 
+			 WebElement deletetransaction = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@id='gpExpenseEntryCheck'])[1]")));
+			 deletetransaction.click();
+			 Thread.sleep(500);
+			 driver.findElement(By.id("deleteTran")).click();
+			 Thread.sleep(1000);
+			 driver.findElement(By.xpath("//button[normalize-space()='confirm']")).click();
+			 driver.switchTo().alert().accept();
+			 
+			 
+			 
+			//Page navigation Edit Table
+			 
+		        WebElement pagenavigation = driver.findElement(By.name("expenseTranListTable_length"));
+		        Select select1 = new Select(pagenavigation);
+		        select1.selectByVisibleText("25");
+		        Thread.sleep(3000);
+		        WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expenseTranListTable_next")));
+		        nextpage.click();
+		        Thread.sleep(5000);
+		        WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expenseTranListTable_previous")));
+		        previous.click();
+		        Thread.sleep(5000);
+		        driver.findElement(By.xpath("(//img[@class='img-responsive goSummary'])[2]")).click();
+		        Thread.sleep(1000);
+		        
+		        //Download
+		        driver.findElement(By.xpath("(//td[contains(@class,'download-control1 fileDownloadBtn')])[1]")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Journal Entry Report Download']")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Journal Entry Totals Report Download']")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Consolidated Report Download']")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Send CorrectLife AMEX Invoice']")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Send Youmans AMEX Invoice']")).click();
+		        Thread.sleep(1000);
+		        WebElement pagenavigation1 = driver.findElement(By.name("expenseSummaryTable_length"));
+		        Select select12 = new Select(pagenavigation1);
+		        select12.selectByVisibleText("25");
+		        Thread.sleep(3000);
+		        WebElement nextpage1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expenseSummaryTable_next")));
+		        nextpage.click();
+		        Thread.sleep(5000);
+		        WebElement previous1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expenseSummaryTable_previous")));
+		        previous.click();
+		        Thread.sleep(5000);
   }}
