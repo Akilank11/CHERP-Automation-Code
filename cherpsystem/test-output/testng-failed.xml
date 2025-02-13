@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Cherpsystem.cherpsystem.ReimbursementForm">
+      <class name="Cherpsystem.cherpsystem.Monthlyinvoice">
         <methods>
-          <include name="loginTest"/>
+          <include name="Monthlyinvoice"/>
         </methods>
-      </class> <!-- Cherpsystem.cherpsystem.ReimbursementForm -->
+      </class> <!-- Cherpsystem.cherpsystem.Monthlyinvoice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
