@@ -120,7 +120,7 @@ public class Chathamreport {
 			driver.findElement(By.xpath("//button[normalize-space()='ok']")).click();
 			Thread.sleep(1000);	
 			
-			
+			//Page Navigation
 			 WebElement pagenavigation = driver.findElement(By.name("quarterlySummaryTable_length"));
 			    Select select4 = new Select(pagenavigation);
 			    select4.selectByVisibleText("20");
