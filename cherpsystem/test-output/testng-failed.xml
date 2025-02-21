@@ -5,7 +5,7 @@
     <classes>
       <class name="Cherpsystem.cherpsystem.Pharmacystatement">
         <methods>
-          <include name="Tablefunction"/>
+          <include name="Editpharmacy"/>
         </methods>
       </class> <!-- Cherpsystem.cherpsystem.Pharmacystatement -->
     </classes>

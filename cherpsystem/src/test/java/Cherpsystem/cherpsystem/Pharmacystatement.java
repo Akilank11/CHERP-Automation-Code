@@ -39,7 +39,7 @@ public class Pharmacystatement {
 
 	  @Test (enabled=false)
 	  public void loginTest() throws InterruptedException {
-	      driver.get("http://localhost:8080/CHERPSystem/login");
+	      driver.get("http://localhost:8090/CHERPSystem/login");
 	      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
 	      driver.findElement(By.id("password")).sendKeys("Dev@9090");
 	      //WebElement rememberme =driver.findElement(By.id("rememberMe1"));
@@ -102,9 +102,9 @@ public class Pharmacystatement {
 	  }
 		 
 		 //Search, Table Function
-		 @Test 
+		 @Test(enabled=false)
 		  public void Tablefunction() throws InterruptedException {
-		      driver.get("http://localhost:8080/CHERPSystem/login");
+		      driver.get("http://localhost:8090/CHERPSystem/login");
 		      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
 		      driver.findElement(By.id("password")).sendKeys("Dev@9090");
 		      //WebElement rememberme =driver.findElement(By.id("rememberMe1"));
@@ -179,4 +179,70 @@ public class Pharmacystatement {
 				    previous.click();
 				    Thread.sleep(2500);
 				    driver.findElement(By.xpath("(//td[@class=' download-control1 fileDownloadBtn'])[1]")).click();
-	  }}
+		 }
+				  //Search, Table Function
+					 @Test 
+					  public void Editpharmacy() throws InterruptedException {
+					      driver.get("http://localhost:8090/CHERPSystem/login");
+					      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+					      driver.findElement(By.id("password")).sendKeys("Dev@9090");
+					      //WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+					  	// rememberme.click();
+					  	driver.findElement(By.id("btn-login")).click();
+					  	driver.manage().window().maximize();
+					  	
+					  //Click Pharmacy
+
+						WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+						WebElement Pharmacy= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Pharmacy']")));
+						Pharmacy.click(); 
+					 	WebElement Pharmacystatement= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Pharmacy Statement']"))); 
+					 	Pharmacystatement.click();
+					Thread.sleep(5000);
+					
+					//Edit
+					driver.findElement(By.xpath("(//td[contains(@class,'edit-control btnCol')])[1]")).click();
+					Thread.sleep(5000);
+		 
+					
+					WebElement Facility = driver.findElement(By.id("facilityid"));
+				    Select Facility1 = new Select(Facility);
+				    Facility1.selectByVisibleText("Barrow County Jail (124)");
+				    Thread.sleep(1000);
+				    driver.findElement(By.id("Search")).click();
+				    Thread.sleep(2000);
+				    driver.findElement(By.id("Reset")).click();
+				    Thread.sleep(3000);
+				    
+				    driver.findElement(By.xpath("(//input[@id='billingreportamt'])[1]")).clear();
+				    Thread.sleep(1000);
+				    driver.findElement(By.xpath("(//input[@id='billingreportamt'])[1]")).sendKeys("123.45");
+		 
+				    driver.findElement(By.xpath("(//input[@id='invoiceamt'])[1]")).clear();
+				    Thread.sleep(1000);
+				    driver.findElement(By.xpath("(//input[@id='invoiceamt'])[1]")).sendKeys("46");
+				    Thread.sleep(1000);
+				    
+				    driver.findElement(By.id("saveBillingTran")).click();
+				    Thread.sleep(3000);
+				    driver.switchTo().alert().accept();
+				    Thread.sleep(2000);
+					 
+				  //Page Navigation
+					 WebElement pagenavigation = driver.findElement(By.name("pharmacyStmtTranListTable_length"));
+					    Select select4 = new Select(pagenavigation);
+					    select4.selectByVisibleText("15");
+					    Thread.sleep(1000);
+					    WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("pharmacyStmtTranListTable_last")));
+					    nextpage.click();
+					    Thread.sleep(1500);
+					    WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("pharmacyStmtTranListTable_first")));
+					    previous.click();
+					    Thread.sleep(2500);
+					    
+					    driver.findElement(By.id("PDFPrint")).click();
+					    Thread.sleep(2500);
+					    
+					    driver.findElement(By.xpath("(//img[@class='img-responsive goSummary'])[2]")).click();
+					 }}
+
