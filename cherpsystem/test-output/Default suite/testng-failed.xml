@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Cherpsystem.cherpsystem.SNUInvoiceSummary">
+      <class name="Cherpsystem.cherpsystem.MBPDuploadconfig">
         <methods>
           <include name="loginTest"/>
         </methods>
-      </class> <!-- Cherpsystem.cherpsystem.SNUInvoiceSummary -->
+      </class> <!-- Cherpsystem.cherpsystem.MBPDuploadconfig -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

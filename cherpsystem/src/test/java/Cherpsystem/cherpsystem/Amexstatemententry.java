@@ -228,6 +228,10 @@ WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By
 		        Thread.sleep(1000);
 		        driver.findElement(By.xpath("//button[normalize-space()='Consolidated Report Download']")).click();
 		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Download CorrectLife AMEX Invoice']")).click();
+		        Thread.sleep(1000);
+		        driver.findElement(By.xpath("//button[normalize-space()='Download Youmans AMEX Invoice']")).click();
+		        Thread.sleep(1000);
 		        driver.findElement(By.xpath("//button[normalize-space()='Send CorrectLife AMEX Invoice']")).click();
 		        Thread.sleep(1000);
 		        driver.findElement(By.xpath("//button[normalize-space()='Send Youmans AMEX Invoice']")).click();
