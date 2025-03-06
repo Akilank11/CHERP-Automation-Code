@@ -79,7 +79,7 @@ WebElement toYear = driver.findElement(By.name("endYear"));
 Select toYearselect = new Select(toYear);
 toYearselect.selectByVisibleText("2024");
 
-Thread.sleep(2000);
+Thread.sleep(1500);
 driver.findElement(By.id("saveData")).click();
 Thread.sleep(4000);
 driver.findElement(By.id("Clear")).click();
