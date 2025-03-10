@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class XRayBillSummary {
+public class UltrasoundBillSummary {
 	WebDriver driver = new ChromeDriver();
 	//FirefoxOptions firefoxoptions = new FirefoxOptions();
 	//ChromeOptions chromeoptions = new ChromeOptions();
@@ -52,8 +52,8 @@ public class XRayBillSummary {
 	 	WebElement Otherinvoice = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Other Invoices']")));
 	 	Otherinvoice.click(); 
 	 	Thread.sleep(2000);
-	 	WebElement XRayBill = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='X-Ray Bills']"))); 
-	 	XRayBill.click();
+	 	WebElement Ultrasound = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ultrasound Bills']"))); 
+	 	Ultrasound.click();
 	Thread.sleep(2000);
 	
 	//Create Lab Bills
@@ -115,8 +115,8 @@ public class XRayBillSummary {
 	 	WebElement Otherinvoice = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Other Invoices']")));
 	 	Otherinvoice.click(); 
 	 	Thread.sleep(2000);
-	 	WebElement XRayBill = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='X-Ray Bills']"))); 
-	 	XRayBill.click();
+	 	WebElement Ultrasound = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ultrasound Bills']"))); 
+	 	Ultrasound.click();
 	Thread.sleep(2000);
 	
 	//Create Xray Bills
