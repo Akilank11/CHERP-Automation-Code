@@ -300,8 +300,21 @@ WebElement DownloadTalliedReport = wait.until(ExpectedConditions.elementToBeClic
 DownloadTalliedReport.click(); Thread.sleep(2000);
 
 driver.findElement(By.xpath("//img[@data-placement='right']")).click();
+ 
+Thread.sleep(3000);
 
 
+//Page Navigation
+WebElement pagenavigation = driver.findElement(By.name("invoiceSummaryTable_length"));
+Select select1 = new Select(pagenavigation);
+select1.selectByVisibleText("30");
+Thread.sleep(3000);
+WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("invoiceSummaryTable_next")));
+nextpage.click();
+Thread.sleep(5000);
+WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("invoiceSummaryTable_previous")));
+previous.click();
+Thread.sleep(5000);
 }
 }
 
