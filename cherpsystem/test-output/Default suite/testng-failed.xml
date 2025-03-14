@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Cherpsystem.cherpsystem.XRayBillSummary">
+      <class name="Cherpsystem.cherpsystem.Aflac">
         <methods>
-          <include name="loginTest"/>
+          <include name="editunum"/>
         </methods>
-      </class> <!-- Cherpsystem.cherpsystem.XRayBillSummary -->
+      </class> <!-- Cherpsystem.cherpsystem.Aflac -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
