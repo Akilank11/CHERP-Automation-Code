@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-21T13:21:18 IST" name="Default suite" finished-at="2025-03-21T13:21:39 IST" duration-ms="20575">
+  <suite started-at="2025-04-17T14:59:16 IST" name="Default suite" finished-at="2025-04-17T14:59:48 IST" duration-ms="31601">
     <groups>
     </groups>
-    <test started-at="2025-03-21T13:21:18 IST" name="Default test" finished-at="2025-03-21T13:21:39 IST" duration-ms="20575">
-      <class name="Cherpsystem.cherpsystem.BCBSDetailedreport">
-        <test-method signature="loginTest()[pri:0, instance:Cherpsystem.cherpsystem.BCBSDetailedreport@26bab2f1]" started-at="2025-03-21T13:21:18 IST" name="loginTest" finished-at="2025-03-21T13:21:39 IST" duration-ms="20554" status="PASS">
+    <test started-at="2025-04-17T14:59:16 IST" name="Default test" finished-at="2025-04-17T14:59:48 IST" duration-ms="31601">
+      <class name="Cherpsystem.cherpsystem.PharmacyInvoiceReport">
+        <test-method signature="loginTest()[pri:0, instance:Cherpsystem.cherpsystem.PharmacyInvoiceReport@26bab2f1]" started-at="2025-04-17T14:59:16 IST" name="loginTest" finished-at="2025-04-17T14:59:48 IST" duration-ms="31578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-      </class> <!-- Cherpsystem.cherpsystem.BCBSDetailedreport -->
+      </class> <!-- Cherpsystem.cherpsystem.PharmacyInvoiceReport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
