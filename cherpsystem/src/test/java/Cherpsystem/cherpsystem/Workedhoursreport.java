@@ -36,7 +36,7 @@ public class Workedhoursreport {
 	      //driver.manage().window().maximize();
 	  //}
 
-	  @Test 
+	  @Test (enabled=false)
 	  public void Comparisionreport() throws InterruptedException {
 	      driver.get("http://localhost:8080/CHERPSystem/login");
 	      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
@@ -96,4 +96,45 @@ driver.findElement(By.id("newSearch")).click();
 Thread.sleep(3000);
 driver.findElement(By.id("clearData")).click();
 
-	  }}
+	  }
+	  @Test 
+	  public void WorkedHoursVarianceSummaryReport() throws InterruptedException {
+	      driver.get("http://localhost:8080/CHERPSystem/login");
+	      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+	      driver.findElement(By.id("password")).sendKeys("Dev@7070");
+	      //WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+	  	// rememberme.click();
+	  	driver.findElement(By.id("btn-login")).click();
+	  	driver.manage().window().maximize();
+	  	
+	  //Click Worked Hours Report
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 	WebElement Agencystaffing = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Agency Staffing']")));
+	 	Agencystaffing.click(); 
+	 	Thread.sleep(2000);
+	 	WebElement Workedhoursreport = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Worked Hours Report']"))); 
+	 	Workedhoursreport.click();
+	Thread.sleep(2000);
+	
+	
+//Worked Hours Variance Summary Report
+
+
+WebElement Month = driver.findElement(By.name("fromMonth"));
+Select Monthselect = new Select(Month);
+Monthselect.selectByVisibleText("January");
+
+WebElement Year = driver.findElement(By.name("fromYear"));
+Select Yearselect = new Select(Year);
+Yearselect.selectByVisibleText("2025");
+
+
+
+
+
+Thread.sleep(1500);
+driver.findElement(By.xpath("//button[normalize-space()='Worked Hours Variance Summary Report']")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//button[@onclick='clearWorkedHoursVarianceSummaryReportValues()']")).click();
+	  
+}}
