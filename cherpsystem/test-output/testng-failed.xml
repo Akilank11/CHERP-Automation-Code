@@ -5,7 +5,7 @@
     <classes>
       <class name="Cherpsystem.cherpsystem.Workedhoursreport">
         <methods>
-          <include name="Comparisionreport"/>
+          <include name="WorkedHoursVarianceSummaryReport"/>
         </methods>
       </class> <!-- Cherpsystem.cherpsystem.Workedhoursreport -->
     </classes>

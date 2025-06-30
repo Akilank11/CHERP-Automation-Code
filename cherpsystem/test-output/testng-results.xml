@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-27T16:00:04 IST" name="Default suite" finished-at="2025-06-27T16:01:08 IST" duration-ms="63807">
+  <suite started-at="2025-06-30T16:30:42 IST" name="Default suite" finished-at="2025-06-30T16:31:30 IST" duration-ms="47857">
     <groups>
     </groups>
-    <test started-at="2025-06-27T16:00:04 IST" name="Default test" finished-at="2025-06-27T16:01:08 IST" duration-ms="63807">
+    <test started-at="2025-06-30T16:30:42 IST" name="Default test" finished-at="2025-06-30T16:31:30 IST" duration-ms="47857">
       <class name="Cherpsystem.cherpsystem.Workedhoursreport">
-        <test-method signature="Comparisionreport()[pri:0, instance:Cherpsystem.cherpsystem.Workedhoursreport@26bab2f1]" started-at="2025-06-27T16:00:04 IST" name="Comparisionreport" finished-at="2025-06-27T16:01:08 IST" duration-ms="63786" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="WorkedHoursVarianceSummaryReport()[pri:0, instance:Cherpsystem.cherpsystem.Workedhoursreport@68ead359]" started-at="2025-06-30T16:30:42 IST" name="WorkedHoursVarianceSummaryReport" finished-at="2025-06-30T16:31:30 IST" duration-ms="47831" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#clearData"}
+              <![CDATA[element click intercepted: Element <button type="button" class="savebtn1" onclick="clearWorkedHoursVarianceSummaryReportValues()">...</button> is not clickable at point (541, 463). Other element would receive the click: <div class="jconfirm-cell">...</div>
   (Session info: chrome=137.0.7151.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f5fed8accca94fa0c3908021a012c0a9, findElement {using=id, value=clearData}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\PANINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53322}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53322/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f5fed8accca94fa0c3908021a012c0a9]]>
+Command: [ae0c82d6fdde5daed1f4e24280dd4313, clickElement {id=f.DDABE027857D39AFB82E6C6253FE3589.d.875F372BC0DED32E495DCFD51E03A71F.e.10522}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\PANINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49441}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49441/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ae0c82d6fdde5daed1f4e24280dd4313)] -> xpath: //button[@onclick='clearWorkedHoursVarianceSummaryReportValues()']]
+Session ID: ae0c82d6fdde5daed1f4e24280dd4313]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#clearData"}
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="savebtn1" onclick="clearWorkedHoursVarianceSummaryReportValues()">...</button> is not clickable at point (541, 463). Other element would receive the click: <div class="jconfirm-cell">...</div>
   (Session info: chrome=137.0.7151.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f5fed8accca94fa0c3908021a012c0a9, findElement {using=id, value=clearData}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\PANINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53322}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53322/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f5fed8accca94fa0c3908021a012c0a9
+Command: [ae0c82d6fdde5daed1f4e24280dd4313, clickElement {id=f.DDABE027857D39AFB82E6C6253FE3589.d.875F372BC0DED32E495DCFD51E03A71F.e.10522}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\PANINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49441}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49441/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ae0c82d6fdde5daed1f4e24280dd4313)] -> xpath: //button[@onclick='clearWorkedHoursVarianceSummaryReportValues()']]
+Session ID: ae0c82d6fdde5daed1f4e24280dd4313
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -40,11 +40,9 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at Cherpsystem.cherpsystem.Workedhoursreport.Comparisionreport(Workedhoursreport.java:97)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at Cherpsystem.cherpsystem.Workedhoursreport.WorkedHoursVarianceSummaryReport(Workedhoursreport.java:138)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -73,10 +71,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Comparisionreport -->
+        </test-method> <!-- WorkedHoursVarianceSummaryReport -->
       </class> <!-- Cherpsystem.cherpsystem.Workedhoursreport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
