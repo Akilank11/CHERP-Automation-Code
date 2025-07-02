@@ -137,4 +137,59 @@ driver.findElement(By.xpath("//button[normalize-space()='Worked Hours Variance S
 Thread.sleep(3000);
 driver.findElement(By.xpath("//button[@onclick='clearWorkedHoursVarianceSummaryReportValues()']")).click();
 	  
-}}
+}
+	  @Test 
+	  public void WorkedHoursEmailStatusDetails() throws InterruptedException {
+	      driver.get("http://localhost:8080/CHERPSystem/login");
+	      driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+	      driver.findElement(By.id("password")).sendKeys("Dev@7070");
+	      //WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+	  	// rememberme.click();
+	  	driver.findElement(By.id("btn-login")).click();
+	  	driver.manage().window().maximize();
+	  	
+	  //Click Worked Hours Report
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 	WebElement Agencystaffing = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Agency Staffing']")));
+	 	Agencystaffing.click(); 
+	 	Thread.sleep(2000);
+	 	WebElement Workedhoursreport = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Worked Hours Report']"))); 
+	 	Workedhoursreport.click();
+	Thread.sleep(2000);
+	
+	
+//Worked Hours Email Status Details
+
+	WebElement Facility = driver.findElement(By.name("facilityIdFilter"));
+	Select Facilityselect = new Select(Facility);
+	Facilityselect.selectByVisibleText("Acadia Parish Jail");
+
+WebElement Month = driver.findElement(By.name("startMonthFilter"));
+Select Monthselect = new Select(Month);
+Monthselect.selectByVisibleText("January");
+
+WebElement Year = driver.findElement(By.name("startYearFilter"));
+Select Yearselect = new Select(Year);
+Yearselect.selectByVisibleText("2025");
+
+
+Thread.sleep(1500);
+driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//button[@onclick='clearSearchValues()']")).click();	  
+
+//Page navigation
+WebElement pagenavigation = driver.findElement(By.name("facilityWorkedHoursEmailStatusTable_length"));
+Select select4 = new Select(pagenavigation);
+select4.selectByVisibleText("40");
+Thread.sleep(3000);
+WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("facilityWorkedHoursEmailStatusTable_next")));
+nextpage.click();
+Thread.sleep(5000);
+WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("facilityWorkedHoursEmailStatusTable_previous")));
+previous.click();
+Thread.sleep(8000);
+
+	  
+	  }
+}
