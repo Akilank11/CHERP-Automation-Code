@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Cherpsystem.cherpsystem.Gwinnettreport">
+      <class name="Cherpsystem.cherpsystem.Correcthealthvendors">
         <methods>
-          <include name="Grid3"/>
+          <include name="Download"/>
         </methods>
-      </class> <!-- Cherpsystem.cherpsystem.Gwinnettreport -->
+      </class> <!-- Cherpsystem.cherpsystem.Correcthealthvendors -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
